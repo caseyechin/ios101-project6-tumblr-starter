@@ -6,7 +6,7 @@
 import UIKit
 import Nuke
 
-class ViewController: UIViewController, UITableViewDataSource {
+class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
     @IBOutlet weak var tableView: UITableView!
 
@@ -35,8 +35,27 @@ class ViewController: UIViewController, UITableViewDataSource {
             let url = photo.originalSize.url
             Nuke.loadImage(with: url, into: cell.postImageView)
         }
-
+        
+        tableView.rowHeight = 150
+        cell.accessoryType = UITableViewCell.AccessoryType.none
+        
         return cell
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        let indexPath = tableView.indexPathForSelectedRow
+        
+        let index = indexPath?.row
+    
+        let detailViewController = segue.destination as! DetailViewController
+        
+        if index != nil {
+            
+            detailViewController.post = posts[index!]
+            
+        }
+        
     }
 
     func fetchPosts() {
