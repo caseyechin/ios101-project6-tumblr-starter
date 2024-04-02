@@ -2,7 +2,7 @@
 
 Submitted by: **Casey Chin**
 
-**Tumblr** is an app that 
+**Tumblr** is an app that displays posts from tumblr.
 
 Time spent: **2** hours spent in total
 
@@ -26,11 +26,13 @@ Here is a reminder on how to embed Loom videos on GitHub. Feel free to remove th
 
 [Guide]](https://www.youtube.com/watch?v=GA92eKlYio4) .
 
-
+https://giphy.com/gifs/GKpd50uKjQj2FqRZi9
 
 ## Notes
 
 Describe any challenges encountered while building the app.
+
+I had a bit of trouble trying to connect the tableviews to each other.
 
 ## License
 
